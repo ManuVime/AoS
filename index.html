@@ -29,20 +29,141 @@
     </div>
   </div>
   <div class="fasi">
+    <div id="Inizio" class="expandable" onclick="expandFCuor()">
+      <h1>Cuor di legno</h1>
+      <div id="InizioTesto" class="hidden">
+        <p>Scegli 3 unità nemiche, +1 a colpire contro di loro</p>
+        <hr>
+        <p>Se le unità non hanno caricato e sono entro 9'' da verdeggiante, hanno ward 6+</p>
+      </div>
+    </div>
     <div id="faseEroi" class="expandable" onclick="expandFaseEroi()">
       <h1>Fase degli Eroi</h1>
       <div id="faseEroiTesto" class="hidden">
-        <h2>Inizio</h2>
-          <p>Alarielle: Rito della vita -> Fino alla fine del turno tutti gli elementi di terreno sono verdeggianti</p>
-          <p>Tutti: Luoghi di potere -> Cura 1 ferita ad un'unità entro 9'' da verdeggiante</p>
+          <h2>Inizio</h2>
+          <p><strong>Alarielle</strong>: Rito della vita -> Fino alla fine del turno tutti gli elementi di terreno sono verdeggianti</p>
+          <p><strong>Tutte</strong>: Luoghi di potere -> Cura 1 ferita ad un'unità entro 9'' da verdeggiante</p>
+          <hr>
           <h2>Durante</h2>
-          <p>Alarielle: Fioritura di vita -> Si cura di 2D6</p>
-          <div id="faseEroiMagie" class="magie expandable hidden" onclick="expandFaseEroiMagie()">
-            <h3>magie!</h3>
-          </div>
+          <p><strong>Alarielle</strong>: Fioritura di vita -> Si cura di 2D6</p>
+          <h3>Magie</h3>
+          <p><strong>Alarielle</strong> -> Metamorfosi (7,16'') -> Tira un dado pari al risultato, per ogni 3+ fai una mortale, se uccide fai bosco</p>
+          <p><strong>Alarielle</strong> -> Trono di viticci (9) -> Fino alla tua prossima fase degli eroi, alla fine di ogni fase cura di 1 ferita</p>
+          <p><strong>Alarielle</strong> -> Ricrescita (5,18'') -> Cura D6</p>
+          <p><strong>Alarielle</strong> -> Gli abitanti del sottosuolo (7,12'') -> Tira un dado per ogni modello di un'unità, per ogni 5+ fai una mortale</p>
+          <p><strong>Alarielle</strong> -> Raccolto letale (6,3'') -> Ogni unità nemica subisce D3 mortali</p>
+          <p><strong>Alarielle</strong> -> Armonia verdeggiante (7,18'') -> Riporta 1 modello di un'unità, se è driadi o treerevenant riporta D3 modelli</p>
+          <p><strong>Alarielle</strong> -> Canto arboreo (7,16'') -> Scegli un bosco. Migliora di 1 il rend delle armi da mischia di un unità entro 9'' da quel bosco</p>
+          <p><strong>Lady</strong> -> Gli abitanti del sottosuolo (7,12'') -> Tira un dado per ogni modello di un'unità, per ogni 5+ fai una mortale</p>
+          <p><strong>Lady</strong> -> Aspetto della regina eterna (7,12'') -> Tutte le unità hanno ward 5+</p>
+          <p><strong>Tutte</strong> -> Scudo mistico (5,12'') -> Salvezza +1</p>
+          <p><strong>Tutte</strong> -> Dardo arcano (5,12'') -> All'inizio di una qualsiasi fase fai una mortale, se entro 3'' fai D3 mortali</p>
+          <p><strong>Tutte</strong> -> Benedizione verdeggiante (6,18'') -> Schiera un bosco</p>
+          <hr>
           <h2>Fine</h2>
-          <p>Alarielle: Rito della vita -> Fino alla fine del turno tutti gli elementi di terreno sono verdeggianti</p>
-          <p>Tutti: Luoghi di potere -> Cura 1 ferita ad un'unità entro 9'' da verdeggiante</p>
+          <p><strong>Alarielle</strong> -> Fioritura di vita -> Tira un dado e somma il numero del round, con 6+ torna in vita con 8 ferite assegnate</p>
+          <p><strong>Hive</strong> -> Alveare corroborante -> Scegli un eroe o mago entro 9'', con 2+ aggiungi 3''' a movimento e carica oppure peggiora di 1 il rend degli attacchi</p>
+          <hr>
+          <h2><strong>Comandi</strong></h2>
+          <p>Chiamata a raccolta -> Tira un dado per ogni modello ucciso, per ogni 6 riporta un modello in vita</p>
+      </div>
+    </div>
+    <div id="faseMov" class="expandable" onclick="expandFaseMov()">
+      <h1>Fase di Movimento</h1>
+      <div id="faseMovTesto" class="hidden">
+          <h2>Inizio</h2>
+          <p><strong>Durthu</strong>: Sentiero degli spiriti -> Se entro 6'' da verdeggiante, sposta entro 6'' da un altro verdeggiante</p>
+          <p><strong>Tree revenant</strong>: Musico -> Muovi ovunque</p>
+          <hr>
+          <h2>Fine</h2>
+          <p><strong>Alarielle</strong> -> Anfore spirituali -> Evoca</p>
+          <p><strong>Lady</strong> -> Invito all'ira -> Evoca al 2+</p>
+          <p><strong>Tutte</strong> -> Percorrere i sentieri nascosti -> Se entro 9'' da verdeggiante, sposta entro 9'' da altro verdeggiante/p>
+          <hr>
+          <h2><strong>Comandi</strong></h2>
+          <p>A passo di corsa -> Corri a +6''</p>
+          <p>Rischierarsi -> Se entro 9'' da un unità che si è appena mossa, muoviti di D6</p>
+      </div>
+    </div>
+    <div id="faseCar" class="expandable" onclick="expandFaseCar()">
+      <h1>Fase di Carica</h1>
+      <div id="faseCarTesto" class="hidden">
+          <h2>Fine</h2>
+          <p><strong>Bosco</strong> -> Vendicativi spiriti della foresta -> Tira un dado per ogni unità entro 1'' (aggiungi 2 se uno o più maghi o persistenti entro 6'' dal bosco), al 6+ fa D3 mortali</p>
+          <hr>
+          <h2><strong>Comandi</strong></h2>
+          <p>Verso la vittoria -> Ritira la carica</p>
+          <p>Scatenare l'inferno -> I modelli entro 6'' da un'unità nemica sparano con colpire -1</p>
+      </div>
+    </div>
+    <div id="faseCombat" class="expandable" onclick="expandFaseCombat()">
+      <h1>Fase di Combat</h1>
+      <div id="faseCombatTesto" class="hidden">
+          <h2>Inizio</h2>
+          <p><strong>Lady</strong> -> Viticci frementi -> +1 per colpire alla Lady o -1 a colpire per gli attacchi contro la Lady</p>
+          <p><strong>Durthu</strong> -> Gladio -> Scegli un profilo arma, aggiungi D3 attacchi</p>
+          <h2>Durante</h2>
+          <p><strong>Tutte</strong> -> Colpisci e svanisci -> Dopo aver combattuto, se entro 9'' da verdeggiante sposta entro 9'' da un altro verdeggiante</p>
+          <hr>
+          <h2><strong>Comandi</strong></h2>
+          <p>Attacco totale -> +1 colpire</p>
+          <p>Difesa totale -> +1 Salvezza</p>
+      </div>
+    </div>
+    <div id="faseShock" class="expandable" onclick="expandFaseShock()">
+      <h1>Fase di Shock</h1>
+      <div id="faseShockTesto" class="hidden">
+          <h2><strong>Comandi</strong></h2>
+          <p>Presenza ispiratrice -> Ignora test di shock</p>
+      </div>
+    </div>
+    <div class="containerUnit">
+      <div id="Alarielle" class="Alarielle box" onclick="expandAlarielle()">
+        <h3>Alarielle</h3>
+        <div id="AlarielleTesto" class="hidden">
+          <p><strong>Ariete vivente</strong> -> Se effettui un assalto mostruoso "pedata" e l'unità scelta ha 1 ferita, al 2+ infliggi D6 mortali</p>
+          <p><strong>Spiritelli luminosi turbinanti</strong> -> Può ritirare, tirare e caricare</p>
+          <p><strong>Artiglio dei morenti</strong> -> Alla fine di qualsiasi fase, se hai ferito con Artiglio tira un dado, con un 6 uccidi modello</p>
+        </div>
+      </div>
+      <div id="Lady" class="Lady box" onclick="expandLady()">
+        <h3>Lady</h3>
+        <div id="LadyTesto" class="hidden">
+          <p><strong>Corona di verdia</strong> -> Le unità entro 6'' sono considerate entro un bosco</p>
+        </div>
+      </div>
+      <div id="Durthu" class="Durthu box" onclick="expandDurthu()">
+        <h3>Durthu</h3>
+        <div id="DurthuTesto" class="hidden">
+          <p><strong>Guerriero nodoso</strong> -> Ignora i modificatori alla salvezza</p>
+          <p><strong>Gladio</strong> -> Scegli un'arma, aggiungi D3 attacchi</p>
+          <p><strong>Guardiano irascibile</strong> -> +1 agli attacchi della spada se entro 9'' entro verdeggiante</p>
+        </div>
+      </div>
+      </div>
+      <div class="containerUnit">
+      <div id="Arcieri" class="Arcieri box" onclick="expandArcieri()">
+        <h3>Arcieri</h3>
+        <div id="ArcieriTesto" class="hidden">
+          <p><strong>Campione</strong> -> +1 attacchi del campione</p>
+          <p><strong>Frecce di larve</strong> -> Se colpire con arco è = 6, infliggi D3 mortali</p>
+          <p><strong>Spiriti dello zefiro</strong> -> Dopo aver ricevuto il comando "scatenare l'inferno", con 2+ può ritirarsi</p>
+        </div>
+      </div>
+      <div id="Driadi" class="Driadi box" onclick="expandDriadi()">
+        <h3>Driadi</h3>
+        <div id="DriadiTesto" class="hidden">
+          <p><strong>Campione</strong> -> +1 attacchi del campione</p>
+          <p><strong>Benedizioni della foresta</strong> -> -1 a colpire e a ferire se entro 9'' da verdeggiante</p>
+        </div>
+      </div>
+      <div id="TreeRevenant" class="TreeRevenant box" onclick="expandTreeRevenant()">
+        <h3>Tree Revenant</h3>
+        <div id="TreeRevenantTesto" class="hidden">
+          <p><strong>Campione</strong> -> +1 attacchi del campione</p>
+          <p><strong>Alfiere</strong> -> Ammassa a 6''</p>
+          <p><strong>Memorie marziali</strong> -> Può ricevere "attacco totale" e "difesa totale" senza spendere PC</p>
+        </div>
       </div>
     </div>
   </div>

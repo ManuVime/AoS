@@ -25,18 +25,68 @@
     width: 100%;
     margin: 5% auto 0 auto;
     text-align: center;
-  }
+}
+
+#Inizio {
+    margin: 0px auto 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #d85007;
+}
 
 #faseEroi {
     width: 80%;
-    margin: 0 auto 0 auto;
+    margin: 0px auto 20px auto;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 30px;
     background-color: #e8bc6d;
 }
 
-#faseEroiMagie {
-    z-index: 2;
+#faseMov {
+    margin: 0px auto 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #e8bc6d;
+}
+
+#faseCar {
+    margin: 0px auto 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #e8bc6d;
+}
+
+#faseCombat {
+    margin: 0px auto 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #e8bc6d;
+}
+
+#faseShock {
+    margin: 0px auto 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #e8bc6d;
+}
+
+.containerUnit {
+   display: flex;
+}
+
+.box {
+    margin: 20px 0 0 20px;
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    background-color: #e8bc6d;
+    display: inline-block;
+    text-align: center;
 }
 
 .expandable {
@@ -46,7 +96,8 @@
 }
 
 .expanded {
-    height: 500px;
+    height: 100%;
+    padding: 0 0 50px 0;
 }
 
 h1 {
@@ -73,10 +124,18 @@ p {
     color: black;
 }
 
+strong {
+    background: none;
+}
+
 .hidden {
     visibility: hidden;
 }
 
 .visible {
     background-color: #e8bc6d;
+}
+
+.visibleInizio {
+    background-color: #d85007;
 }

@@ -1,134 +1,103 @@
-//Raccogliamo tutti gli elementi
-let faseEroiTab = "chiuso"
+function expandFCuor() {
+    let Inizio = document.getElementById("Inizio");
+    let InizioTesto = document.getElementById("InizioTesto");
+    Inizio.classList.toggle("expanded");
+    InizioTesto.classList.toggle("hidden");
+    InizioTesto.classList.toggle("visibleInizio");
+}
 
 function expandFaseEroi() {
     let faseEroi = document.getElementById("faseEroi");
     let faseEroiTesto = document.getElementById("faseEroiTesto");
-    let faseEroiMagie = document.getElementById("faseEroiMagie");
     faseEroi.classList.toggle("expanded");
     faseEroiTesto.classList.toggle("hidden");
     faseEroiTesto.classList.toggle("visible");
-    faseEroiMagie.classList.toggle("hidden");
-    faseEroiMagie.classList.toggle("visible");
 }
 
-function expandFaseEroiMagie() {
-    faseEroiMagie.classList.toggle("expanded");
+function expandFaseMov() {
+    let faseMov = document.getElementById("faseMov");
+    let faseMovTesto = document.getElementById("faseMovTesto");
+    faseMov.classList.toggle("expanded");
+    faseMovTesto.classList.toggle("hidden");
+    faseMovTesto.classList.toggle("visible");
 }
 
-
-/*
-let iExercise = 0;
-let iSerie = 1;
-let iDay=1;
-var timer; //la definisco quì perché altrimenti non posso usarla in changeDay
-refreshData();
-
-function changeDay() {
-    clearInterval(timer);
-    if (iDay === 4) {
-        iDay = 1;
-        day.innerHTML = `<h1>Lunedì</h1>`
-        iExercise = 0;
-        iSerie = 1;
-        refreshData();
-    }
-    else{
-        iDay++;
-        if (iDay === 2) {
-            day.innerHTML = `<h1>Mercoledì</h1>`
-            iExercise = 6;
-            iSerie = 1;
-        }
-        if (iDay === 3) {
-            day.innerHTML = `<h1>Venerdì</h1>`
-            iExercise = 12;
-            iSerie = 1;
-        }
-        if (iDay === 4) {
-            day.innerHTML = `<h1>Sabato</h1>`
-            iExercise = 18;
-            iSerie = 1;
-        }
-        refreshData();    
-    }
+function expandFaseCar() {
+    let faseCar = document.getElementById("faseCar");
+    let faseCarTesto = document.getElementById("faseCarTesto");
+    faseCar.classList.toggle("expanded");
+    faseCarTesto.classList.toggle("hidden");
+    faseCarTesto.classList.toggle("visible");
 }
 
-function startCountdown() {
-    clearInterval(timer);
-    const esercizio = source [iExercise];
-    var count = esercizio.rest; // 2 minutes in seconds
-    timer = setInterval(function() {
-      count--;
-      var minutes = Math.floor(count / 60);
-      var seconds = count % 60;
-      var countdownElement = document.getElementById("countdown");
-      if (countdownElement) {
-        countdownElement.innerHTML = ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
-      }
-      if (count == 0) {
-        clearInterval(timer);
-        // Do something when countdown is finished
-        if ((iExercise+1)%6 === 0 & iSerie>=esercizio.serie){
-            finished.classList.remove("hidden");
-            body.classList.add("hidden");
-        }
-        if (iSerie>=esercizio.serie) {
-            iSerie = 1;
-            iExercise++;
-            refreshData();
-        }
-        else {
-            iSerie++;
-            refreshData();
-        }
-      }
-    }, 1000);
-  }
-
-function changeExercise() {
-    clearInterval(timer);
-    if ((iExercise+1)%6 === 0){
-        finished.classList.remove("hidden");
-        body.classList.add("hidden");
-    }
-    else {
-        iExercise++;
-        iSerie=1;
-        refreshData();
-    }
+function expandFaseCombat() {
+    let faseCombat = document.getElementById("faseCombat");
+    let faseCombatTesto = document.getElementById("faseCombatTesto");
+    faseCombat.classList.toggle("expanded");
+    faseCombatTesto.classList.toggle("hidden");
+    faseCombatTesto.classList.toggle("visible");
 }
 
-function changeSerie() {
-    clearInterval(timer);
-    const esercizio = source [iExercise];
-    if ((iExercise+1)%6 === 0 & iSerie>=esercizio.serie){
-        finished.classList.remove("hidden");
-        body.classList.add("hidden");
-    }
-    else if (iSerie>=esercizio.serie) {
-        iSerie = 1;
-        iExercise++;
-        refreshData();
-    }
-    else {
-        iSerie++;
-        refreshData();
-    }
+function expandFaseShock() {
+    let faseShock = document.getElementById("faseShock");
+    let faseShockTesto = document.getElementById("faseShockTesto");
+    faseShock.classList.toggle("expanded");
+    faseShockTesto.classList.toggle("hidden");
+    faseShockTesto.classList.toggle("visible");
 }
 
-function refreshData() {
-    const esercizio = source [iExercise];
-    const nextEsercizio = source [iExercise+1];
-    exercise.innerHTML = `<h4>Esercizio ${esercizio.esercizio} di 6</h4>`;
-    serie.innerHTML = `<h4>Serie ${iSerie} di ${esercizio.serie}</h4>`;
-    ripetizione.innerHTML = `<h4>${esercizio.ripetizioni} Ripetizioni</h4>`;
-    img.innerHTML = `<img class "img" src ="${esercizio.immagine}" alt = "${esercizio.nome}">`;
-    if ((iExercise+1)%6 === 0) {
-        img2.innerHTML = `<img class "img2" src ="images/plank.jpg" alt = "plank">`;
-    }
-    else {
-        img2.innerHTML = `<img class "img2" src ="${nextEsercizio.immagine}" alt = "${nextEsercizio.nome}">`;
-    }
-    clock.innerHTML = `<h2 id="countdown">${("0" + Math.floor(esercizio.rest / 60)).slice(-2) + ":" + ("0" + esercizio.rest % 60).slice(-2)}</h2>`;
-}*/
+function expandAlarielle() {
+    let Alarielle = document.getElementById("Alarielle");
+    let AlarielleTesto = document.getElementById("AlarielleTesto");
+    Alarielle.classList.toggle("expanded");
+    AlarielleTesto.classList.toggle("hidden");
+    AlarielleTesto.classList.toggle("visible");
+}
+
+function expandLady() {
+    let Lady = document.getElementById("Lady");
+    let LadyTesto = document.getElementById("LadyTesto");
+    Lady.classList.toggle("expanded");
+    LadyTesto.classList.toggle("hidden");
+    LadyTesto.classList.toggle("visible");
+}
+
+function expandDurthu() {
+    let Durthu = document.getElementById("Durthu");
+    let DurthuTesto = document.getElementById("DurthuTesto");
+    Durthu.classList.toggle("expanded");
+    DurthuTesto.classList.toggle("hidden");
+    DurthuTesto.classList.toggle("visible");
+}
+
+function expandArcieri() {
+    let Arcieri = document.getElementById("Arcieri");
+    let ArcieriTesto = document.getElementById("ArcieriTesto");
+    Arcieri.classList.toggle("expanded");
+    ArcieriTesto.classList.toggle("hidden");
+    ArcieriTesto.classList.toggle("visible");
+}
+
+function expandDriadi() {
+    let Driadi = document.getElementById("Driadi");
+    let DriadiTesto = document.getElementById("DriadiTesto");
+    Driadi.classList.toggle("expanded");
+    DriadiTesto.classList.toggle("hidden");
+    DriadiTesto.classList.toggle("visible");
+}
+
+function expandTreeRevenant() {
+    let TreeRevenant = document.getElementById("TreeRevenant");
+    let TreeRevenantTesto = document.getElementById("TreeRevenantTesto");
+    TreeRevenant.classList.toggle("expanded");
+    TreeRevenantTesto.classList.toggle("hidden");
+    TreeRevenantTesto.classList.toggle("visible");
+}
+
+function expandBosco() {
+    let Bosco = document.getElementById("Bosco");
+    let BoscoTesto = document.getElementById("BoscoTesto");
+    Bosco.classList.toggle("expanded");
+    BoscoTesto.classList.toggle("hidden");
+    BoscoTesto.classList.toggle("visible");
+}
